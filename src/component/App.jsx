@@ -1,29 +1,70 @@
-import React, { Component, useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles.css";
 import Analysis from "../component/Analysis";
 import Solution from "../component/Solution";
-
-export default function App() {
-  var po = 0;
+import Solution1 from "../component/Solution1";
+import Footer from "../component/Footer";
+import Wait from "../component/Wait";
+export default function App(props) {
+  console.log("1dbdb");
   const [count, setpage] = useState(<Analysis />);
+  const [name1, setname] = useState("opop ");
+  const [data1, setdata1] = useState({
+    name: "pop ",
+    meditation: " ",
+    diet: " ",
+    sleeptime: " ",
+    sleephour: " ",
+    exercise: " "
+  });
+  function handleChange(value) {
+    setdata1({
+      name: value.namep,
+      meditation: value.meditation,
+      diet: value.diet,
+      sleeptime: value.sleeptime,
+      sleephour: value.sleephour,
+      exercise: value.exercise
+    });
+    setpage(() => (
+      <Solution1
+        namep={value.namep}
+        meditation={value.meditation}
+        diet={value.diet}
+        sleeptime={value.sleeptime}
+        sleephour={value.sleephour}
+        exercise={value.exercise}
+      />
+    ));
+    //Fourthlinkclicked();
+  }
+  function handle() {
+    Thirdlinkclicked();
+  }
+  /*function Fourthlinkclicked() {
+    setpage(<Wait onChange={handle} />);
+  }*/
   function firstlinkclicked() {
-    setpage(<Solution />);
+    setpage(<Solution value={data1} onChange={handleChange} />);
   }
   function Secondlinkclicked() {
-    setpage(<Analysis pogo={po} />);
+    console.log(data1);
+    setpage(<Analysis />);
   }
+  /*function Thirdlinkclicked() {
+    setpage(<Solution1 namep={data1.name} />);
+  }*/
+
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar heading">
-        <a class="navbar-brand happy" href="#">
-          Happy Living
-        </a>
+        <a class="navbar-brand happy">Happy Living</a>
 
         <ul class="navbar-nav">
           <li class="nav-item  solution">
-            <a class="nav-link" href="#" onClick={() => firstlinkclicked()}>
+            <a class="nav-link" onClick={() => firstlinkclicked()}>
               Solution
             </a>
           </li>
@@ -35,6 +76,7 @@ export default function App() {
         </ul>
       </nav>
       {count}
+      <Footer />
     </div>
   );
 }
