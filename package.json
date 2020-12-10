@@ -1,5 +1,5 @@
 {
-  "name": "powerbioriginal",
+  "name": "bdapbl-forked",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -12,7 +12,11 @@
     "react": "17.0.0",
     "react-bootstrap": "1.4.0",
     "react-dom": "17.0.0",
-    "react-scripts": "3.4.3"
+    "react-font-icon": "1.0.0",
+    "react-scripts": "3.4.3",
+    "react-sound": "1.2.0",
+    "react-use": "15.3.4",
+    "use-sound": "2.0.1"
   },
   "devDependencies": {
     "typescript": "3.8.3"

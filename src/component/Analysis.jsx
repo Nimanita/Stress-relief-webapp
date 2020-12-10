@@ -87,7 +87,7 @@ export default function Analysis() {
       <iframe
         width="900"
         height="400"
-        src="https://app.powerbi.com/reportEmbed?reportId=42f0c6f4-4f51-4e42-a6a1-fa20862fe808&autoAuth=true&ctid=8c78c122-f781-4500-9c2a-f645a76281f5&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWluZGlhLXdlc3QtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
+        src="https://app.powerbi.com/reportEmbed?reportId=610cbddc-403d-4acc-966e-7cf7b716a718&autoAuth=true&ctid=8c78c122-f781-4500-9c2a-f645a76281f5&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWluZGlhLXdlc3QtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"
         frameborder="0"
         allowFullScreen="true"
       ></iframe>
@@ -97,10 +97,7 @@ export default function Analysis() {
       </h4>
       <h4 class="supporting">
         American Psycological Association report also supports our inference{" "}
-        <a
-          class="kaggle-link"
-          href="https://www.kaggle.com/osmi/mental-health-in-tech-survey"
-        >
+        <a class="kaggle-link" href="https://www.stress.org/stress-research">
           Link.
         </a>
       </h4>
